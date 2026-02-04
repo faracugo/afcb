@@ -134,6 +134,29 @@
             position: relative;
             z-index: 1;
         }
+        .boton-sorpresa {
+            background: #e63946;
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .boton-sorpresa:hover {
+            background: #d62839;
+            transform: scale(1.05);
+        }
+
+        .mensaje-oculto {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #6a1b1b;
+        }
     </style>
 </head>
 <body>
@@ -181,11 +204,32 @@
             <strong>Con todo mi amor,</strong><br>
             🦆
         </p>
+        
+        <button class="boton-sorpresa" onclick="mostrarMensaje()">
+            💕 Mensaje sorpresa
+        </button>
+
+        <p id="mensajeOculto" class="mensaje-oculto">
+            Te amo más de lo que las palabras pueden decir,
+            y agradezco cada día tenerte en mi vida ❤️
+        </p>
+
     </div>
 
     <footer>
         14 de febrero 💘
     </footer>
+
+    <script>
+        function mostrarMensaje() {
+        const mensaje = document.getElementById('mensajeOculto');
+        if (mensaje.style.display === 'block') {
+            mensaje.style.display = 'none';
+        } else {
+            mensaje.style.display = 'block';
+        }
+        }
+    </script>
 
 </body>
 </html>
